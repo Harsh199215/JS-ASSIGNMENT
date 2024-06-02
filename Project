@@ -1,0 +1,36 @@
+const NFT = [];
+
+function mintNFT(Modelname, Colour, MfdDate) 
+{
+    const Car = {};
+
+        Car.Rank = Math.floor(Math.random()*100);
+        Car.Model = Modelname,
+        Car.Color = Colour,
+        Car.Year = MfdDate
+
+    NFT.push(Car);
+}
+
+function listNFTs() 
+{console.log("These are my Car's NFT Characteristics");
+    for (let i = 0; i < NFT.length; i++) 
+       
+        {
+
+        console.log(NFT[i]);
+
+        }
+}
+function getTotalSupply() 
+{
+    console.log("Total number of NFT minted till now are ", NFT.length);
+}
+
+mintNFT("Porsche 956", "Dark Purple", "1982");
+mintNFT("Bugatti Veyron","Black Carbon","2007");
+mintNFT("Supra MK4","White","1993");
+
+listNFTs();
+getTotalSupply();
+
